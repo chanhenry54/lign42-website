@@ -9,10 +9,14 @@
         .body-container {
             width: 65%;
 
-            #title h1, h2 {
-                font-family: "Comic Sans MS", "Comic Sans", cursive;
-                color: white;
-                font-weight: bold;
+            h1, h2 {
+                    font-family: "Comic Sans MS", "Comic Sans", cursive;
+                    color: white;
+                    font-weight: bold;
+
+            }
+
+            #title {
                 text-align: center;
             }
         }
