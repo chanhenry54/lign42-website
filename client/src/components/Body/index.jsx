@@ -17,7 +17,8 @@ const Body = () => {
                 <div className="body-container">
                     <div id="title">
                         <h1>the uwu wegistew (´･ω･`)</h1>
-                        <h2>lign 42 winter 2022</h2>
+                        <h1>lign 42 winter 2022</h1>
+                        <h2>group members: henry chan, eric xiao, faith lu, jacob lin, jenny bach</h2>
                     </div>
                     <div id="intro">
                         <p>This is an introduction.</p>
