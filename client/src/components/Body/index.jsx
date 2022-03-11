@@ -17,15 +17,15 @@ const Body = () => {
                 <div className="body-container">
                     <div id="title">
                         <h1>the uwu wegistew (´･ω･`)</h1>
-                        <h1>lign 42 winter 2022</h1>
-                        <h2>group members: henry chan, eric xiao, faith lu, jacob lin, jenny bach</h2>
+                        <h2>lign 42 winter 2022</h2>
+                        <h3>group members: henry chan, eric xiao, faith lu, jacob lin, jenny bach</h3>
                     </div>
                     <div id="intro">
                         <h2>project intro</h2>
                         <p>This is an introduction.</p>
                     </div>
                     <div id="history">
-                        <h2>history of "uwu"</h2>
+                        <h2 style={{color: "#000000D9"}}>history of "uwu"</h2>
                         <p>The exact origin of "uwu" is unknown, but below is a timeline of how "uwu" has grown in popularity and meaning over the years in Internet culture.</p>
                         <Timeline mode="alternate">
                             <Timeline.Item label="October 14th, 2005">DaakuKitsune, Yu-Gi-Oh fanfiction Genie of the Puzzle, "Again, feel free to throw squids and fish at me. UwU I deserve it, you know." - <a href="https://knowyourmeme.com/memes/uwu">Know Your Meme</a></Timeline.Item>
