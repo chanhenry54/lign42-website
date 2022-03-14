@@ -1,6 +1,32 @@
 .body {
-    background-image: url('https://i.imgur.com/JXkPtqN.png');
     background-color: #ffd6d9;
+    padding-bottom: 100px;
+
+    .anchor {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        background-color: #ffd6d9;
+        font-family: "Comic Sans MS", "Comic Sans";
+        font-weight: bold;
+        font-size: 24px;
+    }
+
+    #title {
+        text-align: center;
+        font-size: 32px;
+        padding: 400px 0px;
+        background-image: url("https://i.imgur.com/5lwNrUB.png");
+        background-size: cover;
+        background-color: white;
+
+        h1, h2, h3 {
+            font-family: "Comic Sans MS", "Comic Sans";
+            font-weight: bold;
+            color: #ffb2c9;
+            margin-bottom: 0;
+        }
+    }
 
     .body-flex {
         display: flex;
@@ -8,26 +34,53 @@
         align-items: center;
 
         .body-container {
-            width: 65%;
-
-            h1, h2, h3 {
-                    font-family: "Comic Sans MS", "Comic Sans", cursive;
-                    color: white;
-                    font-weight: bold;
+            width: 80%;
+            font-family: "Comic Sans MS", "Comic Sans", cursive;
+            font-weight: bold;
+            
+            #h2-title {
+                margin-bottom: -24px;
+                transform: translateX(100px);
+                font-weight: bold;
+                font-size: 64px;
             }
 
-            #title {
-                text-align: center;
-                font-size: 24px;
-                background-color: rgba(0, 0, 0, 0.6);
-                padding: 10px;
+            #content-body {
+                background-color: white;
+                padding: 20px 5px;
                 border-radius: 20px;
+                font-size: 24px;
+                padding: 50px;
+            }
+
+            #background {
+                padding: 100px 0px;
+
+                #background-body {
+                    background-color: white;
+                    border-radius: 20px;
+                    font-size: 24px;
+                    padding: 50px;
+                    display: flex;
+                    flex-direction: row;
+
+                    img {
+                        height: 250px;
+                        padding-left: 100px;
+                    }
+                }
             }
 
             #history {
-                background-color: #ffffff;
-                padding: 10px;
-                border-radius: 20px;
+                padding: 100px 0px;
+            }
+
+            #findings {
+                padding: 100px 0px;
+            }
+
+            #conclusion {
+                padding: 100px 0px;
             }
         }
     }
