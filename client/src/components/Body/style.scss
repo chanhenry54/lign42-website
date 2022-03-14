@@ -10,12 +10,30 @@
         font-family: "Comic Sans MS", "Comic Sans";
         font-weight: bold;
         font-size: 24px;
+
+        .ant-anchor-link a {
+            padding: 10px;
+        }
+
+        .ant-anchor-link-title {
+            border-radius: 10px;
+        }
+
+        .ant-anchor-link-active > .ant-anchor-link-title {
+            color: #d21404;
+        }
+
+        .ant-anchor-link-title:hover {
+            background-color: #3a3a3a;
+            border-radius: 10px;
+            color: #ffd6d9;
+        }
     }
 
     #title {
         text-align: center;
         font-size: 32px;
-        padding: 400px 0px;
+        padding: 30vh 0;
         background-image: url("https://i.imgur.com/5lwNrUB.png");
         background-size: cover;
         background-color: white;
@@ -37,7 +55,7 @@
             width: 80%;
             font-family: "Comic Sans MS", "Comic Sans", cursive;
             font-weight: bold;
-            
+
             #h2-title {
                 margin-bottom: -24px;
                 transform: translateX(100px);
