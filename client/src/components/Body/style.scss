@@ -88,6 +88,13 @@
                     h3 {
                         text-decoration: underline;
                     }
+
+                    img {
+                        width: 1000px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
+                    }
                 }
 
                 #phonology {
@@ -97,6 +104,15 @@
                   
                     img {
                         width: 1000px;
+                    }
+                }
+
+                #social-perception {
+                    img {
+                        width: 1000px;
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto;
                     }
                 }
             }
@@ -128,6 +144,14 @@
 
             #history {
                 padding: 100px 0px;
+
+                .ant-timeline-item-label {
+                    font-size: 18px;
+                }
+
+                .ant-timeline-item-content {
+                    font-size: 18px;
+                }
             }
 
             #related-works {
@@ -143,14 +167,35 @@
                     align-items: flex-end;
                     justify-content: space-between;
 
+                    a:link, a:visited, a:hover, a:active {
+                        text-decoration: none;
+                        color: black;
+                    }
+
                     img {
                         transform: translateX(-100px);
                     }
                 }
             }
 
-            #conclusion {
+            #future-work {
                 padding: 100px 0px;
+            }
+
+            #references {
+                padding: 100px 0px;
+
+                a:link, a:visited, a:hover, a:active {
+                    text-decoration: underline;
+                }
+
+                li {
+                    padding-bottom: 20px;
+
+                    span {
+                        font-style: italic;
+                    }
+                }
             }
         }
     }
