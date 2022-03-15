@@ -256,7 +256,7 @@ const Body = () => {
                                 <li>the-spooky-lee. (2021, August 13). <span>Reading shit from Helluva Boss and other shows in a voice that is not ok-</span> [Blog post with audio file]. Tumblr. <a href="https://the-spooky-lee.tumblr.com/post/659408226557755392/reading-shit-from-helluva-boss-and-other-shows-in" target="_blank" rel="noreferrer">https://the-spooky-lee.tumblr.com/post/659408226557755392/reading-shit-from-helluva-boss-and-other-shows-in</a></li>
                                 <li>WebFreak. (2019, October 4). <span>I'd just like to interject for a moment uwu</span> [Video]. YouTube. <a href="https://www.youtube.com/watch?v=QXUSvSUsx80" target="_blank" rel="noreferrer">https://www.youtube.com/watch?v=QXUSvSUsx80</a></li>
                             </ul>
-                            <div style={{display:'flex', justifyContent: 'center', gap: "10px"}}><p>thanks for helping us find emojis troung!!!</p> <img src="https://i.imgur.com/YYx9gVQ.jpg" alt='TROUNG' /></div>
+                            <div style={{display:'flex', justifyContent: 'center', gap: "10px"}}><p>thanks for helping us find emojis truong!!!</p> <img src="https://i.imgur.com/YYx9gVQ.jpg" alt='TRUONG' /></div>
                         </div>
                     </div>
                 </div>
