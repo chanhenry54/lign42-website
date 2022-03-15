@@ -82,7 +82,7 @@ const Body = () => {
                         <h1 id="h1-title">related works</h1>
                         <div id="content-body">
                             <p>While there is very little existing literature on the popular usage of uwu, one thesis paper, authored by Bailey Bigott at the University of Georgia, provided us an extensive sociolinguistic perspective on the uwu register, which they name “Mock Infantile Speech” (MIS) [1]. This paper connects various phonological features and sociolinguistic associations of MIS to characterize a larger “uwu” persona. This persona indexes interest in subcultures such as gaming, anime, and “cute” aesthetics.</p>
-                            <p>In particular, Bigott names pitch raising, sibilant retraction, liquid gliding and deletion, and interdental stopping to be characteristic phonological features of MIS.</p>
+                            <p style={{marginBottom: "0px"}}>In particular, Bigott names pitch raising, sibilant retraction, liquid gliding and deletion, and interdental stopping to be characteristic phonological features of MIS.</p>
                             <ul>
                                 <li>Pitch raising: “The mean frequency for speakers using MIS was 349.2935 hertz (Hz), while speakers in the standard guise had a pitch average of 236.645 Hz.”</li>
                                 <li>Sibilant retraction: “Nearly all speakers demonstrated retraction of some kind, with retraction of /s/ to /ʃ/ being much more frequent than the voiced counterpart /z/, possibly due to the infrequency of /ʒ/ in English.”</li>
@@ -98,6 +98,7 @@ const Body = () => {
                             <img src="https://i.imgur.com/JaBzoAn.png?2" alt="bongo" />
                         </div>
                         <div id="content-body">
+                            <p>We compiled video and audio data from social media websites and surveyed other university students in order to determine in what ways the uwu register is produced. We characterize the uwu register to be both a textual and vocal register, and we distinguish between the two domains in our results.</p>
                             <div id="orthography">
                                 <h2>orthography</h2>
                                 <p>Orthography is the set of conventions and norms used to dictate how language should be written. In this study, we are interested in exactly how people uwu-ify words in text. An uwu-ification of a word is an alternative way to spell a word such as to convey that the writer is writing with the uwu register. In an initial survey of online text data, we find that there may be several different ways to uwu-ify a word. A consistent trend we see among both acceptability rankings and respondent comments is that the degree to which an uwu-ification deviates from the base word is inversely proportional to its acceptability. Several respondents expressed distaste towards over-uwu-ification and preference for following few simple rules.</p>
@@ -251,14 +252,15 @@ const Body = () => {
                                 <li>[2] Kirby, J 2012, Lecture 15: Nasals, approximants, rhotics, and laterals, lecture notes, Cơ sở âm vị học và ngữ âm học (Foundations of phonetics and phonology), The University of Edinburgh, delivered 26 July 2012.</li>
                                 <li>mothcharm. (2020, August 28). <span>All three sets of emojis are now compiled into expression memes by popular demand! Please credit me if you use…</span> [Images attached] [Tweet]. Twitter. <a href="https://twitter.com/mothcharm/status/1308918275116597248" target="_blank" rel="noreferrer">https://twitter.com/mothcharm/status/1308918275116597248</a></li>
                                 <li>remnantsofpluto. (2021, February 25). <span>oh that’s so scawy owo</span> [Blog post with video]. Tumblr. <a href="https://remnantsofpluto.tumblr.com/post/644158958292090880/oh-thats-so-scawy-owo" target="_blank" rel="noreferrer">https://remnantsofpluto.tumblr.com/post/644158958292090880/oh-thats-so-scawy-owo</a></li>
+                                <li>StrayRogue. (2018, May 5). <span>smack smack</span> [GIF attached] [Tweet]. Twitter. <a href="https://twitter.com/StrayRogue/status/992994454058381312">https://twitter.com/StrayRogue/status/992994454058381312</a></li>
                                 <li>the-spooky-lee. (2021, August 13). <span>Reading shit from Helluva Boss and other shows in a voice that is not ok-</span> [Blog post with audio file]. Tumblr. <a href="https://the-spooky-lee.tumblr.com/post/659408226557755392/reading-shit-from-helluva-boss-and-other-shows-in" target="_blank" rel="noreferrer">https://the-spooky-lee.tumblr.com/post/659408226557755392/reading-shit-from-helluva-boss-and-other-shows-in</a></li>
                                 <li>WebFreak. (2019, October 4). <span>I'd just like to interject for a moment uwu</span> [Video]. YouTube. <a href="https://www.youtube.com/watch?v=QXUSvSUsx80" target="_blank" rel="noreferrer">https://www.youtube.com/watch?v=QXUSvSUsx80</a></li>
                             </ul>
+                            <div style={{display:'flex', justifyContent: 'center', gap: "10px"}}><p>thanks for helping us find emojis troung!!!</p> <img src="https://i.imgur.com/YYx9gVQ.jpg" alt='TROUNG' /></div>
                         </div>
                     </div>
                 </div>
             </div>
-
         </div>
     );
 };
