@@ -2,6 +2,14 @@
     background-color: #ffd6d9;
     padding-bottom: 100px;
 
+    .ant-anchor-ink {
+        display: none;
+
+        .ant-anchor-ink-ball {
+            display: none;
+        }
+    }
+
     .anchor {
         display: flex;
         flex-direction: row;
@@ -58,7 +66,7 @@
             font-family: "Comic Sans MS", "Comic Sans", cursive;
             font-weight: bold;
 
-            #h2-title {
+            #h1-title {
                 margin-bottom: -24px;
                 transform: translateX(100px);
                 font-weight: bold;
@@ -71,6 +79,21 @@
                 border-radius: 20px;
                 font-size: 24px;
                 padding: 50px;
+
+                h2, h3 {
+                    font-weight: bold;
+                }
+
+                #phonology {
+                    li {
+                        text-decoration: underline;
+                    }
+                }
+                
+
+                img {
+                    width: 1000px;
+                }
             }
 
             #background {
