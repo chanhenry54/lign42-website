@@ -84,9 +84,15 @@
                     font-weight: bold;
                 }
 
+                #orthography {
+                    h3 {
+                        text-decoration: underline;
+                    }
+                }
+
                 #phonology {
                     li {
-                        text-decoration: underline;
+                        font-size: 28px;
                     }
 
                     img {

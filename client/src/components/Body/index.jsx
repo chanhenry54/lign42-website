@@ -77,7 +77,6 @@ const Body = () => {
                                 <Timeline.Item label="February 12th, 2020">Slang Dictionary, "Squee! Uwu is an emoticon depicting a cute face. It is used to express various warm, happy, or affectionate feelings. A closely related emoticon is owo, which can more specifically show surprise and excitement… There are many variations of uwu and owo, including and OwO, UwU, and OwU, among others." - <a href="https://www.dictionary.com/e/slang/uwu/">Slang Dictionary</a></Timeline.Item>
                                 <Timeline.Item label="February 12th, 2020">Alexander Thian (Twitter user), using uwu as a word instead of a face, "Gemini: just because I flirt with you, it doesn't mean I uWu you." - <a href="https://twitter.com/aMrazing/status/1227668444536922112?ref_src=twsrc%5Etfw%7Ctwcamp%5Etweetembed%7Ctwterm%5E1227668444536922112%7Ctwgr%5E%7Ctwcon%5Es1_&ref_url=https%3A%2F%2Fwww.dictionary.com%2Fe%2Fslang%2Fuwu%2F">Alexander Thian's Twitter</a></Timeline.Item>
                             </Timeline>
-                            <audio controls src={rickroll} />
                         </div>
                     </div>
                     <div id="related-works">
@@ -115,7 +114,22 @@ const Body = () => {
                                     <li>Consonant deletion</li>
                                 </ul>
                                 <p>We employed two different versions of the “r” and “l” replacement rule: the total replacement rule replaces all instances of “r” and “l” in a word with “w”, and the initial replacement rule only replaces the first instance of “r” and “l” with “w”.</p>
-                                
+                                <p>We sampled uwu-ifications and collected ratings for 12 different words. Quantitative analysis was performed by mapping choices on the Likert scale to integers along the range from 0 to 4, inclusive, with 0 being most unacceptable and 4 being most acceptable. The scores for each uwu-ification for each word is averaged over all respondents.</p>
+                                <p>The uwu-ification that was identical to the base word (no orthographic change) was the highest rated uwu-ification for 8 out of 12 words, and the second highest for 3 words.</p>
+                                <h3>“r” and “l” replacement with “w”</h3>
+                                <p>We applied this rule to 8 words, and for 2 of those words we could distinguish between total replacement and initial replacement. The uwu-ification generated from this rule is the highest rated form for 3 of these words, second highest for 4 words, and third highest for 1 word. Initial replacement is second highest and third highest for the two words.</p>
+                                <img src={images['rlreplacement.png']} alt="graph1"/>
+                                <p>We notice that there is a consistent trend in acceptability ratings related to the position of the “r” or “l” consonant. When “r” or “l” is before a vowel, the acceptability of the uwu-ification generated from this rule is higher than that of the base word. Inversely, when “r” or “l” is after a vowel, the acceptability of the uwu-ification generated from this rule is lower than that of the base word. This suggests that the orthographic rule that informs how “r” and “l” consonants are replaced is dependent on the environment of the replaced consonant.</p>
+                                <img src={images['itreplacement.png']} alt="graph2"/>
+                                <p>For the first word, “structure”, there is little variation in the acceptability across the three conditions. For the second word, “rather”, there is a significant decrease in acceptability when we replace the latter “r”, which occurs after a vowel. This supports our hypothesis that replacing “r”s and “l”s after vowels are generally not acceptable.</p>
+                                <h3>“w” insertion</h3>
+                                <p>There are 5 words we applied this rule to for which we can isolate the effects of this rule alone. For each word we insert the “w” after the first non-”r” non-”l” consonant cluster in the word. In the case of “and”, we insert after the vowel to produce “awnd” instead.</p>
+                                <img src={images['insertion.png']} alt="graph3"/>
+                                <p>Consistently across all words, “w” insertion alone is correlated with a decrease in acceptability by a significant degree, with the exception of “post”/”pwost”.</p>
+                                <h3>Consonant Deletion</h3>
+                                <p>There are 5 words we applied this rule to for which we can isolate the effects of this rule alone. For each word, we delete the last consonant. In the case of “worse”, we instead delete the “r” to produce “wose” instead.</p>
+                                <img src={images['consonantdeletion.png']} alt="graph4"/>
+                                <p>Similarly to our results for “w” insertion, consonant deletion alone is correlated with a decrease in acceptability across all words.</p>
                             </div>
                             <div id="phonology">
                                 <h2>phonology</h2>
@@ -182,7 +196,7 @@ const Body = () => {
                     <div id="conclusion">
                         <h1 id="h1-title">conclusion</h1>
                         <div id="content-body">
-                            [inswat concwushion hya]
+                            waning: cwick awt uwu owon wisk <audio controls src={rickroll}/>
                         </div>
                     </div>
                 </div>
