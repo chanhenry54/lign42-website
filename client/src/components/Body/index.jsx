@@ -42,8 +42,21 @@ const Body = () => {
                     <div id="background">
                         <h1 id="h1-title">background</h1>
                         <div id="background-body">
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                            <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/MOREmoji_uwu.svg/2048px-MOREmoji_uwu.svg.png" alt="uwu"></img>
+                            <div>
+                                <p>In the early 2000s, a new phrase was brought to life on the internet: uwu. Although its exact origins are unknown, uwu has become immensely popular, especially in the anime and furry communities. Its usage is often paired with a high-pitched cute-sy register of speech, dubbed the “uwu wegistew” (uwu register), produced through modifying speech or written media to match the tone of “uwu” in a manner akin to baby talk. Some individuals use this register in a mocking or ironic tone to joke around, while others use it unironically to give off the impression of cuteness or shyness. In both cases, audiences express feelings ranging from cringiness to adoration, depending on the usage.</p>
+                                <p>The uwu register, upon its introduction into the internet, found its way into many forms of media. Such forms include videos depicting the register in songs and general daily communication, and copypastas that integrate the register in writing. One such example of the uwu register in the wild is a copypasta by I am a fish on Tumblr, which goes as follows:</p>
+                                <p style={{fontStyle: 'italic'}}>Imagine reading a post, but over the course of it the quality seems to deteriorate and it gets wose an wose, where the swenetence stwucture and gwammer rewerts to a pwoint of uttew non swence, an u jus dont wanna wead it anymwore (o´ω｀o) awd twa wol owdewl iws jus awfwul (´･ω･`);. bwt tw powost iwswnwt obwer nyet, it gwos own an own an own an own. uwu wanyaa stwop weadwing bwut uwu cwant stop wewding, uwu stwartd thwis awnd ur gwoing two fwinibsh it nowo mwattew wat! uwu hab mwoxie kwiddowo, bwut uwu wibl gwib ub sowon. i cwan wite wike dis fwor owors, swo dwont cwalengbe mii..</p>
+                                <p style={{fontStyle: 'italic'}}>… wbats dis??? uwu awe stwill weedinb mwie powost?? uwu habe awot ob detewemwinyanyatiom!! ｡◕‿◕｡! u habve comopweedid tha pwost, good job! </p>
+                                <p>This copypasta starts off in regular and grammatically correct English and slowly integrates the uwu register until the tone of the post has completely changed. It also contains many popular features of the uwu register, most notably the kaomoji emoticons and distorted text.</p>
+                                <p>In order to better understand the uwu register and how it is viewed by the general public, we decided to conduct research on various properties of the register from a linguistic perspective. Through our findings, we hope to provide key insights into the world of the uwu register.</p>
+                            </div>
+                            <div id="background-body-images">
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/MOREmoji_uwu.svg/2048px-MOREmoji_uwu.svg.png" alt="uwu"/>
+                                <img src="https://i.imgur.com/aMsEvh4.png?1" alt="owo2" />
+                                <img src="https://cdn.discordapp.com/emojis/815334200558878780.webp?size=96&quality=lossless" alt="uwu2" />
+                                <img src="https://cdn.discordapp.com/emojis/865494806045655050.webp?size=96&quality=lossless" alt="owo"/>
+                                <img src="https://cdn.discordapp.com/emojis/837051807234523157.webp?size=96&quality=lossless" alt="pwease" />
+                            </div>
                         </div>
                     </div>
                     <div id="history">
@@ -82,10 +95,27 @@ const Body = () => {
                         </div>
                     </div>
                     <div id="findings">
-                        <h1 id="h1-title">findings</h1>
+                        <div id="findings-title">
+                            <h1 id="h1-title">findings</h1>
+                            <img src="https://i.imgur.com/JaBzoAn.png?2" alt="bongo" />
+                        </div>
                         <div id="content-body">
                             <div id="orthography">
                                 <h2>orthography</h2>
+                                <p>An uwu-ification of a word is an alternative way to spell a word such as to convey that the writer is writing with the uwu register. In an initial survey of online text data, we find that there may be several different ways to uwu-ify a word. A consistent trend we see among both acceptability rankings and respondent comments is that the degree to which an uwu-ification deviates from the base word is inversely proportional to its acceptability. Several respondents expressed distaste towards over-uwu-ification and preference for following few simple rules.</p>
+                                <p style={{marginBottom: 0}}>In our survey, we presented particular words and possible uwu-ifications to respondents and asked them to rate the acceptability of each uwu-ification of the word on a five point Likert scale, ranging from “not acceptable” to “fully acceptable”. The uwu-ifications of each word were generated by applying selections of orthographic rules to each word, which we derived from our initial survey of text data. The notable orthographic rules we employed are:</p>
+                                <ul style={{marginBottom: 0}}>
+                                    <li>“r” and “l” replacement with “w”
+                                        <ul>
+                                            <li>Total replacement</li>
+                                            <li>Initial replacement</li>
+                                        </ul>
+                                    </li>
+                                    <li>“w” insertion</li>
+                                    <li>Consonant deletion</li>
+                                </ul>
+                                <p>We employed two different versions of the “r” and “l” replacement rule: the total replacement rule replaces all instances of “r” and “l” in a word with “w”, and the initial replacement rule only replaces the first instance of “r” and “l” with “w”.</p>
+                                
                             </div>
                             <div id="phonology">
                                 <h2>phonology</h2>
