@@ -4,7 +4,18 @@ import 'antd/dist/antd.min.css';
 
 import { Anchor, Timeline } from 'antd';
 
-import rickroll from '../../assets/rickroll.mp3';
+import rickroll from '../../assets/audio/rickroll.mp3';
+
+// function to help us quickly import everything from a folder into a map
+function importAll(r) {
+    let things = {};
+    r.keys().map((item, index) => {things[item.replace('./','')] = r(item); return [];});
+    return things;
+}
+
+const images = importAll(require.context('../../assets/images', false, /\.(png|jpe?g|svg)$/));
+
+const audio = importAll(require.context('../../assets/audio', false, /\.(mp4|mp3|wav)$/));
 
 const { Link } = Anchor;
 
