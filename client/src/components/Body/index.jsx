@@ -4,8 +4,6 @@ import 'antd/dist/antd.min.css';
 
 import { Anchor, Timeline } from 'antd';
 
-import rickroll from '../../assets/audio/rickroll.mp3';
-
 // function to help us quickly import everything from a folder into a map
 function importAll(r) {
     let things = {};
