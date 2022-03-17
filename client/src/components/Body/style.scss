@@ -1,3 +1,120 @@
+.dark-content {
+    color: #ffe6e9;
+
+    a {
+        color: #89cff0;
+    }
+
+    a:hover {
+        color: #bcfff3;
+    }
+
+    .body {
+        background-color: #3a3a3a;
+
+        .anchor {
+            background-color: #3a3a3a;
+
+            .ant-anchor-link-title {
+                color: #ffb2c9;
+            }
+
+            .ant-anchor-link-active > .ant-anchor-link-title {
+                background-color: #ffb2c9;
+                border-radius: 10px;
+                color: #3a3a3a;
+            }
+
+            .ant-anchor-link-title:hover {
+                background-color: #ffb2c9;
+                border-radius: 10px;
+                color: #3a3a3a;
+            }
+
+            .dark-switch {
+                p {
+                    color: #ffb2c9;
+                }
+            }
+        }
+
+        #title {
+            background-image: url("https://i.imgur.com/5lwNrUB.png");
+            background-color: black;
+
+            h1, h2, h3 {
+                font-family: "Comic Sans MS", "Comic Sans";
+                font-weight: bold;
+                color: #ffb2c9;
+                margin-bottom: 0;
+            }
+        }
+
+        .body-flex {
+            .body-container {
+                #h1-title {
+                    color: #ffb2c9;
+                }
+
+                #content-body {
+                    background-color: #4a4a4a;
+
+                    .ant-timeline {
+                        color: #ffe6e9;
+
+                        a {
+                            color: #89cff0;
+                        }
+
+                        a:hover {
+                            color: #bcfff3;
+                        }
+                    }
+
+                    #orthography {
+                        h2, h3 {
+                            color: #ffb2c9;
+                        }
+                    }
+
+                    #phonology {
+                        h2 {
+                            color: #ffb2c9;
+                        }
+                    }
+
+                    #semantics {
+                        h2 {
+                            color: #ffb2c9;
+                        }
+                    }
+
+                    #social-perception {
+                        h2 {
+                            color: #ffb2c9;
+                        }
+                    }
+                }
+
+                #background {
+                    #background-body {
+                        background-color: #4a4a4a;
+                    }
+                }
+
+                #findings {
+                    #findings-title {
+                        a:link, a:visited, a:hover, a:active {
+                            color: #ffb2c9;
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}
+
 .body {
     background-color: #ffd6d9;
     padding-bottom: 100px;
@@ -18,6 +135,18 @@
         font-family: "Comic Sans MS", "Comic Sans";
         font-weight: bold;
         font-size: 24px;
+
+        .dark-switch {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 5px 15px 15px;
+
+            p {
+                font-size: 16px;
+                margin: 0;
+            }
+        }
 
         .ant-anchor-link a {
             padding: 10px;
@@ -101,7 +230,7 @@
                     li {
                         font-size: 28px;
                     }
-                  
+
                     img {
                         width: 75%;
                     }
