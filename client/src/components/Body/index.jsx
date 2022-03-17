@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './style.scss';
 import 'antd/dist/antd.min.css';
 
-import { Anchor, Timeline } from 'antd';
+import { ThemeContext, themes } from '../../assets/themeContext';
+
+import { Anchor, Timeline, Switch } from 'antd';
 
 // function to help us quickly import everything from a folder into a map
 function importAll(r) {
     let things = {};
-    r.keys().map((item, index) => {things[item.replace('./','')] = r(item); return [];});
+    r.keys().map((item, index) => { things[item.replace('./', '')] = r(item); return []; });
     return things;
 }
 
@@ -18,6 +20,9 @@ const audio = importAll(require.context('../../assets/audio', false, /\.(mp4|mp3
 const { Link } = Anchor;
 
 const Body = () => {
+
+    const [lightMode, setLightMode] = useState(true);
+
     return (
         <div className="body">
             <Anchor>
@@ -25,10 +30,21 @@ const Body = () => {
                     <Link href="#title" title="home" />
                     <Link href="#background" title="background" />
                     <Link href="#history" title="history" />
-                    <Link href="#related-works" title="related works"/>
+                    <Link href="#related-works" title="related works" />
                     <Link href="#findings" title="findings" />
                     <Link href="#future-work" title="future work" />
                     <Link href="#references" title="references" />
+                    <ThemeContext.Consumer>
+                        {({ changeTheme }) => (
+                            <div className="dark-switch">
+                                <p>toggle dark mode</p>
+                                <Switch checkedChildren="LT" uncheckedChildren="DK" onChange={() => {
+                                    setLightMode(!lightMode);
+                                    changeTheme(lightMode ? themes.dark : themes.light);
+                                }} />
+                            </div>
+                        )}
+                    </ThemeContext.Consumer>
                 </div>
             </Anchor>
             <div id="title">
@@ -42,18 +58,18 @@ const Body = () => {
                         <h1 id="h1-title">background</h1>
                         <div id="background-body">
                             <div>
-                                <p>In the early 2000s, a new phrase was brought to life on the internet: <span style={{fontStyle: 'italic'}}>uwu</span>. Although its exact origins are unknown, uwu has become immensely popular, especially in the anime and furry communities. Its usage is often paired with a high-pitched cute-sy register of speech, which we dub the “uwu wegistew” (uwu register), produced through modifying speech or written media to match the tone of “uwu” in a manner akin to baby talk. Some individuals use this register in a mocking or ironic tone to joke around, while others use it unironically to give off the impression of cuteness or shyness. In both cases, audiences express feelings ranging from cringiness to adoration, depending on the usage.</p>
+                                <p>In the early 2000s, a new phrase was brought to life on the internet: <span style={{ fontStyle: 'italic' }}>uwu</span>. Although its exact origins are unknown, uwu has become immensely popular, especially in the anime and furry communities. Its usage is often paired with a high-pitched cute-sy register of speech, which we dub the “uwu wegistew” (uwu register), produced through modifying speech or written media to match the tone of “uwu” in a manner akin to baby talk. Some individuals use this register in a mocking or ironic tone to joke around, while others use it unironically to give off the impression of cuteness or shyness. In both cases, audiences express feelings ranging from cringiness to adoration, depending on the usage.</p>
                                 <p>The uwu register, upon its introduction into the internet, found its way into many forms of media. Such forms include videos depicting the register in songs and general daily communication, and copypastas that integrate the register in writing. One such example of the uwu register in the wild is a <a href="https://i-am-a-fish.tumblr.com/post/168157413417/imagine-reading-a-post-but-over-the-course-of-it" target="_blank" rel="noreferrer">copypasta by I am a fish on Tumblr</a>, which goes as follows:</p>
-                                <p style={{fontStyle: 'italic'}}>Imagine reading a post, but over the course of it the quality seems to deteriorate and it gets wose an wose, where the swenetence stwucture and gwammer rewerts to a pwoint of uttew non swence, an u jus dont wanna wead it anymwore (o´ω｀o) awd twa wol owdewl iws jus awfwul (´･ω･`);. bwt tw powost iwswnwt obwer nyet, it gwos own an own an own an own. uwu wanyaa stwop weadwing bwut uwu cwant stop wewding, uwu stwartd thwis awnd ur gwoing two fwinibsh it nowo mwattew wat! uwu hab mwoxie kwiddowo, bwut uwu wibl gwib ub sowon. i cwan wite wike dis fwor owors, swo dwont cwalengbe mii..</p>
-                                <p style={{fontStyle: 'italic'}}>… wbats dis??? uwu awe stwill weedinb mwie powost?? uwu habe awot ob detewemwinyanyatiom!! ｡◕‿◕｡! u habve comopweedid tha pwost, good job! </p>
+                                <p style={{ fontStyle: 'italic' }}>Imagine reading a post, but over the course of it the quality seems to deteriorate and it gets wose an wose, where the swenetence stwucture and gwammer rewerts to a pwoint of uttew non swence, an u jus dont wanna wead it anymwore (o´ω｀o) awd twa wol owdewl iws jus awfwul (´･ω･`);. bwt tw powost iwswnwt obwer nyet, it gwos own an own an own an own. uwu wanyaa stwop weadwing bwut uwu cwant stop wewding, uwu stwartd thwis awnd ur gwoing two fwinibsh it nowo mwattew wat! uwu hab mwoxie kwiddowo, bwut uwu wibl gwib ub sowon. i cwan wite wike dis fwor owors, swo dwont cwalengbe mii..</p>
+                                <p style={{ fontStyle: 'italic' }}>… wbats dis??? uwu awe stwill weedinb mwie powost?? uwu habe awot ob detewemwinyanyatiom!! ｡◕‿◕｡! u habve comopweedid tha pwost, good job! </p>
                                 <p>This copypasta starts off in regular and grammatically correct English and slowly integrates the uwu register until the tone of the post has completely changed. It also contains many popular features of the uwu register, most notably the kaomoji emoticons and distorted text.</p>
                                 <p>In order to better understand the uwu register and how it is viewed by the general public, we decided to conduct research on various properties of the register from a linguistic perspective. Through our findings, we hope to provide key insights into the world of the uwu register.</p>
                             </div>
                             <div id="background-body-images">
-                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/MOREmoji_uwu.svg/2048px-MOREmoji_uwu.svg.png" alt="uwu"/>
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3b/MOREmoji_uwu.svg/2048px-MOREmoji_uwu.svg.png" alt="uwu" />
                                 <img src="https://i.imgur.com/aMsEvh4.png?1" alt="owo2" />
                                 <img src="https://cdn.discordapp.com/emojis/815334200558878780.webp?size=96&quality=lossless" alt="uwu2" />
-                                <img src="https://pbs.twimg.com/media/Eio1KjeWsAItnuM.png" alt="owo"/>
+                                <img src="https://pbs.twimg.com/media/Eio1KjeWsAItnuM.png" alt="owo" />
                                 <img src="https://64.media.tumblr.com/8184a4f199ff4bcaca9369597ff4d7ab/d79ed34618243d7a-ff/s640x960/b7084505d17272f9a6fe26de5c40979f2bf2f6ea.png" alt="pwease" />
                             </div>
                         </div>
@@ -82,7 +98,7 @@ const Body = () => {
                         <h1 id="h1-title">related works</h1>
                         <div id="content-body">
                             <p>While there is very little existing literature on the popular usage of uwu, one thesis paper, authored by Bailey Bigott at the University of Georgia, provided us an extensive sociolinguistic perspective on the uwu register, which they name “Mock Infantile Speech” (MIS) [1]. This paper connects various phonological features and sociolinguistic associations of MIS to characterize a larger “uwu” persona. This persona indexes interest in subcultures such as gaming, anime, and “cute” aesthetics.</p>
-                            <p style={{marginBottom: "0px"}}>In particular, Bigott names pitch raising, sibilant retraction, liquid gliding and deletion, and interdental stopping to be characteristic phonological features of MIS.</p>
+                            <p style={{ marginBottom: "0px" }}>In particular, Bigott names pitch raising, sibilant retraction, liquid gliding and deletion, and interdental stopping to be characteristic phonological features of MIS.</p>
                             <ul>
                                 <li>Pitch raising: “The mean frequency for speakers using MIS was 349.2935 hertz (Hz), while speakers in the standard guise had a pitch average of 236.645 Hz.”</li>
                                 <li>Sibilant retraction: “Nearly all speakers demonstrated retraction of some kind, with retraction of /s/ to /ʃ/ being much more frequent than the voiced counterpart /z/, possibly due to the infrequency of /ʒ/ in English.”</li>
@@ -102,8 +118,8 @@ const Body = () => {
                             <div id="orthography">
                                 <h2>orthography</h2>
                                 <p>Orthography is the set of conventions and norms used to dictate how language should be written. In this study, we are interested in exactly how people uwu-ify words in text. An uwu-ification of a word is an alternative way to spell a word such as to convey that the writer is writing with the uwu register. In an initial survey of online text data, we find that there may be several different ways to uwu-ify a word. A consistent trend we see among both acceptability rankings and respondent comments is that the degree to which an uwu-ification deviates from the base word is inversely proportional to its acceptability. Several respondents expressed distaste towards over-uwu-ification and preference for following few simple rules.</p>
-                                <p style={{marginBottom: 0}}>In our survey, we presented particular words and possible uwu-ifications to respondents and asked them to rate the acceptability of each uwu-ification of the word on a five point Likert scale, ranging from “not acceptable” to “fully acceptable”. The uwu-ifications of each word were generated by applying selections of orthographic rules to each word, which we derived from our initial survey of text data. The notable orthographic rules we employed are:</p>
-                                <ul style={{marginBottom: 0}}>
+                                <p style={{ marginBottom: 0 }}>In our survey, we presented particular words and possible uwu-ifications to respondents and asked them to rate the acceptability of each uwu-ification of the word on a five point Likert scale, ranging from “not acceptable” to “fully acceptable”. The uwu-ifications of each word were generated by applying selections of orthographic rules to each word, which we derived from our initial survey of text data. The notable orthographic rules we employed are:</p>
+                                <ul style={{ marginBottom: 0 }}>
                                     <li>“r” and “l” replacement with “w”
                                         <ul>
                                             <li>Total replacement</li>
@@ -118,17 +134,17 @@ const Body = () => {
                                 <p>The uwu-ification that was identical to the base word (no orthographic change) was the highest rated uwu-ification for 8 out of 12 words, and the second highest for 3 words.</p>
                                 <h3>“r” and “l” replacement with “w”</h3>
                                 <p>We applied this rule to 8 words, and for 2 of those words we could distinguish between total replacement and initial replacement. The uwu-ification generated from this rule is the highest rated form for 3 of these words, second highest for 4 words, and third highest for 1 word. Initial replacement is second highest and third highest for the two words.</p>
-                                <img src={images['rlreplacement.png']} alt="graph1"/>
+                                <img src={images['rlreplacement.png']} alt="graph1" />
                                 <p>We notice that there is a consistent trend in acceptability ratings related to the position of the “r” or “l” consonant. When “r” or “l” is before a vowel, the acceptability of the uwu-ification generated from this rule is higher than that of the base word. Inversely, when “r” or “l” is after a vowel, the acceptability of the uwu-ification generated from this rule is lower than that of the base word. This suggests that the orthographic rule that informs how “r” and “l” consonants are replaced is dependent on the environment of the replaced consonant.</p>
-                                <img src={images['itreplacement.png']} alt="graph2"/>
+                                <img src={images['itreplacement.png']} alt="graph2" />
                                 <p>For the first word, “structure”, there is little variation in the acceptability across the three conditions. For the second word, “rather”, there is a significant decrease in acceptability when we replace the latter “r”, which occurs after a vowel. This supports our hypothesis that replacing “r”s and “l”s after vowels are generally not acceptable.</p>
                                 <h3>“w” insertion</h3>
                                 <p>There are 5 words we applied this rule to for which we can isolate the effects of this rule alone. For each word we insert the “w” after the first non-”r” non-”l” consonant cluster in the word. In the case of “and”, we insert after the vowel to produce “awnd” instead.</p>
-                                <img src={images['insertion.png']} alt="graph3"/>
+                                <img src={images['insertion.png']} alt="graph3" />
                                 <p>Consistently across all words, “w” insertion alone is correlated with a decrease in acceptability by a significant degree, with the exception of “post”/”pwost”.</p>
                                 <h3>Consonant Deletion</h3>
                                 <p>There are 5 words we applied this rule to for which we can isolate the effects of this rule alone. For each word, we delete the last consonant. In the case of “worse”, we instead delete the “r” to produce “wose” instead.</p>
-                                <img src={images['consonantdeletion.png']} alt="graph4"/>
+                                <img src={images['consonantdeletion.png']} alt="graph4" />
                                 <p>Similarly to our results for “w” insertion, consonant deletion alone is correlated with a decrease in acceptability across all words.</p>
                                 <p>These findings describe how each orthographic rule is correlated to the acceptability of a word in isolation from each other. We also surveyed people for the acceptability of uwu-ifications that involved multiple rules, however these were all consistently and significantly less acceptable than the base forms. Notable exceptions to this are the uwu-ifications of “give” and “completed” as “gib” and “compweded”, respectively. Both of these productions score higher than the base words. The scarcity of uwu-ifications that scored well provides evidence for the aforementioned idea that words could become over-uwu-ified and thus unacceptable.</p>
                             </div>
@@ -136,14 +152,14 @@ const Body = () => {
                                 <h2>phonology</h2>
                                 <p>Phonology is the study of how languages organize sounds and how sounds change in speech. The way that sounds change in language is described using phonological rules that delineate what features of a sound change and in what conditions the rule would apply. In this study, we are interested in what ways the uwu register differs phonologically from Standard American English. Through extensive phonological analysis of audio samples of the uwu register online, we have drafted a list of phonological rules that we find to be consistent across speakers and contexts. In the analysis, we plot audio samples onto spectrograms, which display time on the horizontal axis, frequency on the vertical axis, and intensity of a given frequency at a given time by its darkness. Spectrograms are often used in phonological studies to see what sounds are present in speech and how they are produced. In these spectrograms, we look for formants, which look like dark horizontal bands that can move up and down, to distinguish between sounds. All spectrograms are plotted with a frequency range of 1 Hz to 5000 Hz. All frequency measurements are performed using the <a href="https://www.fon.hum.uva.nl/praat/" target="_blank" rel="noreferrer">Praat phonological analysis software tool.</a></p>
                                 <ul>
-                                    <li>liquid replacement: L → [w]</li> <br/>
+                                    <li>liquid replacement: L → [w]</li> <br />
                                     <div>
                                         <p>In the phonological rule above, L represents liquids, which is the class of phonemes that includes the “r” and “l” sounds in Standard American English. We read this rule to say: “liquids are replaced by the sound [w]”. </p>
                                         <p>This is the most common and characteristic rule associated with the uwu register. This phonological rule almost perfectly mirrors its orthographic counterpart where “r”s and “l”s are replaced with “w”s. </p>
                                         <p>While this rule is applied to liquids in any environment, we notice that speakers may inconsistently ignore this rule for parts of a word. We hypothesize that this occurs when users have trouble maintaining speech in the uwu register and inadvertently slip back into Standard American English. In the few cases where this occurs, they occur at the end of a word (i.e. word-finally).</p>
                                         <div>
-                                            <p style={{margin: "0px"}}>Example: “free” /fɹiː/ → [fwiː]</p>
-                                            <img src={images['wet.png']} alt="wet"/> 
+                                            <p style={{ margin: "0px" }}>Example: “free” /fɹiː/ → [fwiː]</p>
+                                            <img src={images['wet.png']} alt="wet" />
                                             <img src={images['free.png']} alt="free" /> <audio controls src={audio['En-us-free.ogg.mp3']} />
                                             <img src={images['fwi.png']} alt="fwi" /> <audio controls src={audio['fwee.wav']} />
                                             <p>top: spectrogram of [fɹi:], bottom: spectrogram of [fwiː]</p>
@@ -152,7 +168,7 @@ const Body = () => {
                                         <p>One exception to this rule we have found is that this rule does not apply to the dark [ɫ], which is pronounced like a normal “l” in English but with the back of the tongue raised slightly. It may also be the case that this rule is restricted based on where in a syllable the phoneme is. Syllables are composed of three parts: an onset which consists of the consonant sounds before the nucleus, the nucleus which consists of the vowel sound(s), and the coda which consists of the consonant sound after the nucleus. We might also hypothesize that this rule cannot apply to liquids at the end of a coda, which would equivalently account for this exception.</p>
                                         <div>
                                             <p>Example: “bill” /bɪl/ → [bwɪɫ]</p>
-                                            <img src={images['bill.png']} alt="bill"/> <audio controls src={audio['En-us-bill.ogg.mp3']} />
+                                            <img src={images['bill.png']} alt="bill" /> <audio controls src={audio['En-us-bill.ogg.mp3']} />
                                             <img src={images['bwill.png']} alt="bwill" /> <audio controls src={audio['bwill.wav']} />
                                             <p>top: spectrogram of [bɪɫ], bottom: spectrogram of [bwɪɫ]</p>
                                         </div>
@@ -169,12 +185,12 @@ const Body = () => {
                                         <p>In the phonological rule above, L represents liquids, and $ represents the syllable boundary, used to indicate that the liquid is in the coda of its syllable. C0 represents “any number of consonants, including none”, used to capture all possible coda clusters. We read this rule to say: “liquids are deleted if they are at the beginning of a coda”. Given that Standard American English does not allow [w] to be the coda of a syllable, we believe that this rule is phonotactically motivated by English coda constraints.</p>
                                         <div>
                                             <p>Example: “called” /kɔld/ → [kɔd]</p>
-                                            <img src={images['called.png']} alt="called"/> <audio controls src={audio['En-us-called.ogg.mp3']} />
-                                            <img src={images['cawd.png']} alt="cawd"/> <audio controls src={audio['cawd.wav']} />
+                                            <img src={images['called.png']} alt="called" /> <audio controls src={audio['En-us-called.ogg.mp3']} />
+                                            <img src={images['cawd.png']} alt="cawd" /> <audio controls src={audio['cawd.wav']} />
                                             <p>top: spectrogram of [kɔld], bottom: spectrogram of [kɔd]</p>
                                         </div>
                                     </div>
-                                    <li>post-onset [w] epenthesis: Ø → [w] / $ C0 [+consonantal −pharyngeal −lateral] _ V</li> <br/>
+                                    <li>post-onset [w] epenthesis: Ø → [w] / $ C0 [+consonantal −pharyngeal −lateral] _ V</li> <br />
                                     <div>
                                         <p>In the phonological rule above, $ represents the syllable boundary, used to indicate that the consonant cluster is the onset of its syllable. C0 represents “any number of consonants, including none”, used to capture all possible onset clusters. We read this rule to say: “insert a [w] sound at the end of an onset if the immediately preceding consonant is not a liquid or glide”.</p>
                                         <p>[w] may not be inserted in the middle of an onset cluster between consonants; only between the onset cluster and the nucleus.</p>
@@ -182,8 +198,8 @@ const Body = () => {
                                         <p>This rule does not always apply to the same environments across speakers and contexts, however every speaker exhibits the ability to apply this rule. Identical syllables and words may be produced with or without the application of this rule across and within speakers. We hypothesize that this variation may simply be a form of free variation, meaning speakers are at liberty to choose when to apply this rule without sounding ungrammatical. Another hypothesis suggests that the variation in the application of this rule is related to the orthographic form of the word. One common trend we noticed among survey results was that respondents were hesitant to leave sequences of words without any orthographic changes (due to the lack of “r”s and “l”s) and would insert “w”s accordingly. Since [w] is restricted from English codas, speakers would naturally insert “w” in the onset of syllables. This hypothesis would mean that the rule is more likely to apply to words in environments deficient in “r”s and “l”s.</p>
                                         <div>
                                             <p>Example: “been” /bɪn/ → [bwɪn]</p>
-                                            <img src={images['been.png']} alt="been"/> <audio controls src={audio['En-us-been.ogg.mp3']} />
-                                            <img src={images['bwin.png']} alt="bwin"/> <audio controls src={audio['bwin.wav']} />
+                                            <img src={images['been.png']} alt="been" /> <audio controls src={audio['En-us-been.ogg.mp3']} />
+                                            <img src={images['bwin.png']} alt="bwin" /> <audio controls src={audio['bwin.wav']} />
                                             <p>top: spectrogram of [bɪn], bottom: spectrogram of [bwɪn]</p>
                                         </div>
                                         <p>We notice in the spectrogram for [bwɪn] that F2 raises from 1000 Hz to 1600 Hz before the production of [ɪ]. In the spectrogram for [bɪn], no such formant movement is seen between the productions of [b] and [ɪ].</p>
@@ -215,7 +231,7 @@ const Body = () => {
                             </div>
                             <div id="social-perception">
                                 <h2>social perception</h2>
-                                <p>Through our survey, we found the most common thought expressed about the uwu register was its <span style={{textDecoration: 'underline'}}>focus on cuteness</span> (or attempt at cuteness), followed by its association with a <span style={{textDecoration: 'underline'}}>high-pitched voice and baby talk</span>. Additionally, the most common emotion among respondents towards usage of the uwu register was <span style={{textDecoration: 'underline'}}>annoyance and displeasure</span>. Other thoughts mentioned by survey respondents included impressions that the register was cringey, jokey, and ironic or sarcastic.</p>
+                                <p>Through our survey, we found the most common thought expressed about the uwu register was its <span style={{ textDecoration: 'underline' }}>focus on cuteness</span> (or attempt at cuteness), followed by its association with a <span style={{ textDecoration: 'underline' }}>high-pitched voice and baby talk</span>. Additionally, the most common emotion among respondents towards usage of the uwu register was <span style={{ textDecoration: 'underline' }}>annoyance and displeasure</span>. Other thoughts mentioned by survey respondents included impressions that the register was cringey, jokey, and ironic or sarcastic.</p>
                                 <img src={images['registerDescriptor.png']} alt="register descriptor" />
                                 <p>The perception towards individuals that use the register had a natural division into two categories: ironic usage versus unironic usage. Ironic usage was considered to be funny and often paired it with a joking or lighthearted scenario, while unironic usage was found to be more weird. There were a number of respondents that mentioned their perceptions of an individual would stay the same, regardless of whether or not the individual uses the uwu register, but the majority of respondents identified that they would associate the individual with a more negative emotion.</p>
                                 <img src={images['respondantPerceptions.png']} alt="respondant perceptions" />
@@ -256,7 +272,7 @@ const Body = () => {
                                 <li>the-spooky-lee. (2021, August 13). <span>Reading shit from Helluva Boss and other shows in a voice that is not ok-</span> [Blog post with audio file]. Tumblr. <a href="https://the-spooky-lee.tumblr.com/post/659408226557755392/reading-shit-from-helluva-boss-and-other-shows-in" target="_blank" rel="noreferrer">https://the-spooky-lee.tumblr.com/post/659408226557755392/reading-shit-from-helluva-boss-and-other-shows-in</a></li>
                                 <li>WebFreak. (2019, October 4). <span>I'd just like to interject for a moment uwu</span> [Video]. YouTube. <a href="https://www.youtube.com/watch?v=QXUSvSUsx80" target="_blank" rel="noreferrer">https://www.youtube.com/watch?v=QXUSvSUsx80</a></li>
                             </ul>
-                            <div style={{display:'flex', justifyContent: 'center', gap: "10px"}}><p>thanks for helping us find emojis truong!!!</p> <img src="https://i.imgur.com/YYx9gVQ.jpg" alt='TRUONG' /></div>
+                            <div style={{ display: 'flex', justifyContent: 'center', gap: "10px" }}><p>thanks for helping us find emojis truong!!!</p> <img src="https://i.imgur.com/YYx9gVQ.jpg" alt='TRUONG' /></div>
                         </div>
                     </div>
                 </div>
