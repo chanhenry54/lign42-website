@@ -38,7 +38,7 @@ const Body = () => {
                         {({ changeTheme }) => (
                             <div className="dark-switch">
                                 <p>toggle dark mode</p>
-                                <Switch checkedChildren="LT" uncheckedChildren="DK" onChange={() => {
+                                <Switch onChange={() => {
                                     setLightMode(!lightMode);
                                     changeTheme(lightMode ? themes.dark : themes.light);
                                 }} />

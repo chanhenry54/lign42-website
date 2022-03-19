@@ -35,6 +35,14 @@
                 p {
                     color: #ffb2c9;
                 }
+
+                .ant-switch {
+                    .ant-switch-handle::before {
+                        background: url("../../assets/images/uwumoon.png");
+                        background-size: 100% 100%;
+                        display: block;
+                    }
+                }
             }
         }
 
@@ -145,6 +153,14 @@
             p {
                 font-size: 16px;
                 margin: 0;
+            }
+
+            .ant-switch {
+                .ant-switch-handle::before {
+                    background: url("../../assets/images/uwusun.png");
+                    background-size: 100% 100%;
+                    display: block;
+                }
             }
         }
 
